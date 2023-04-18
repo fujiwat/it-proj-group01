@@ -5328,6 +5328,6 @@ if(!p.closest){p.closest=function(s){var e=this;while(e&&e.nodeType==1){if(e.mat
 
 
 if (typeof IntelliFactory !=='undefined') {
-  IntelliFactory.Runtime.ScriptBasePath = '/';
+  IntelliFactory.Runtime.ScriptBasePath = '/it-proj-group01/';
   IntelliFactory.Runtime.Start();
 }
