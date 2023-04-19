@@ -55,8 +55,10 @@
 		    /* border-color: white;*/
             color: white;
         }
-        h2 {
+        body {
         	font-family: "Tahoma";
+        	font-weight: "bold";
+        	font-size:  20px;
         }
 
 		/************** calculator */    
@@ -159,7 +161,11 @@
 	                <div ws-hole="Main">
 	                </div>
 	            </div>
-	            <script type="text/javascript" src="calc.js"></script>
+	            <script type="text/javascript" src="calc.js" defer></script>
+	        </div>
+	        <div style="text-align:right; width:330px;">
+	          <label for="id_vSlider">Volume: </label>
+	          <input style="width:70px" type="range" id="id_vSlider" min="0" max="1" step="0.1" value="0.5">
 	        </div>
 		</div>
     </body>
