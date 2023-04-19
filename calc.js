@@ -592,22 +592,54 @@ if(!p.closest){p.closest=function(s){var e=this;while(e&&e.nodeType==1){if(e.mat
   display=Doc.Element("input",[AttrProxy.Create("type","text"),AttrProxy.Create("value","0."),AttrProxy.Create("readonly","")],[]);
   calculator=Doc.Element("div",[],[display,Doc.Element("br",[],[]),Doc.Element("div",[AttrProxy.Create("style","padding: 10px 0px;")],[btn("\ud835\udf45","PI",function()
   {
-   num=Math.PI;
-   updateDisplay();
+   PI();
   }),btn("Sin","SIN",function()
   {
-   num=Math.sin(num);
-   updateDisplay();
+   SIN();
   }),btn("Cos","COS",function()
   {
-   num=Math.cos(num);
-   updateDisplay();
+   COS();
   }),btn("Tan","TAN",function()
   {
-   num=Math.tan(num);
-   updateDisplay();
+   TAN();
   }),btn("\u232b","BS",function()
   {
+   BS();
+  }),Doc.Element("br",[],[]),btn("+/-","N",function()
+  {
+   N();
+  }),digit(7),digit(8),digit(9),btn("÷","DIV",function($5)
+  {
+   DIV();
+  }),Doc.Element("br",[],[]),btn("1/\ud835\udc65","I",function()
+  {
+   I();
+  }),digit(4),digit(5),digit(6),btn("×","MUL",function($5)
+  {
+   MUL();
+  }),Doc.Element("br",[],[]),btn("C","C",function()
+  {
+   C();
+  }),digit(1),digit(2),digit(3),btn("-","SUB",function($5)
+  {
+   SUB();
+  }),Doc.Element("br",[],[]),btn("AC","AC",function()
+  {
+   AC();
+  }),digit(0),btn(".","P",function()
+  {
+   P();
+  }),btn("=","E",function()
+  {
+   E();
+  }),btn("+","PLS",function($5)
+  {
+   PLS();
+  })])]);
+  
+  
+  // -- add t.Fujiwara 20230417 ------------- 
+  function BS(){
    strNum=Slice.string(strNum,{
     $:1,
     $0:0
@@ -616,79 +648,168 @@ if(!p.closest){p.closest=function(s){var e=this;while(e&&e.nodeType==1){if(e.mat
     $0:Strings.length(strNum)-(strNum[strNum.length-1]==="."?3:2)
    });
    updateDisplayByStr(strNum);
-  }),Doc.Element("br",[],[]),btn("+/-","N",function()
-  {
+  }
+  function PI(){
+   num=Math.PI;
+   updateDisplay();
+  }
+  function SIN(){
+   num=Math.sin(num);
+   updateDisplay();
+  }
+  function COS(){
+   num=Math.cos(num);
+   updateDisplay();
+  }
+  function TAN(){
+   num=Math.tan(num);
+   updateDisplay();
+  }
+  function N(){
    num=-num;
    decimals=0;
    updateDisplay();
-  }),digit(7),digit(8),digit(9),btn("÷","DIV",function($5)
-  {
+  }
+  function I(){
+   num=1/num;
+   updateDisplay();
+  }
+  function C(){
+   num=0;
+   decimals=0;
+   updateDisplay();
+  }
+  function AC() {
+   keyString = "";
+   num=0;
+   decimals=0;
+   onum=0;
+   op=null;
+   updateDisplay();
+  }
+  function P(){
+   if(decimals===0)
+   {
+    updateDisplay();
+    decimals=1;
+   }
+  }
+  function E(){
+   if(op!=null&&op.$==1)
+   {
+    num=(op.$0(onum))(num);
+    updateDisplay();
+    op=null;
+   }
+  }
+  function DIV(){
    return O(function($6)
    {
     return function($7)
     {
      return $1($6,$7);
     };
-   },$5);
-  }),Doc.Element("br",[],[]),btn("1/\ud835\udc65","I",function()
-  {
-   num=1/num;
-   updateDisplay();
-  }),digit(4),digit(5),digit(6),btn("×","MUL",function($5)
-  {
+   });
+  }
+  function MUL(){
    return O(function($6)
    {
     return function($7)
     {
      return $2($6,$7);
     };
-   },$5);
-  }),Doc.Element("br",[],[]),btn("C","C",function()
-  {
-   num=0;
-   decimals=0;
-   updateDisplay();
-  }),digit(1),digit(2),digit(3),btn("-","SUB",function($5)
-  {
+   });
+  }
+  function SUB(){
    return O(function($6)
    {
     return function($7)
     {
      return $3($6,$7);
     };
-   },$5);
-  }),Doc.Element("br",[],[]),btn("AC","AC",function()
-  {
-   num=0;
-   decimals=0;
-   onum=0;
-   op=null;
-   updateDisplay();
-  }),digit(0),btn(".","P",function()
-  {
-   if(decimals===0)
-    {
-     updateDisplay();
-     decimals=1;
-    }
-  }),btn("=","E",function()
-  {
-   if(op!=null&&op.$==1)
-    {
-     num=(op.$0(onum))(num);
-     updateDisplay();
-     op=null;
-    }
-  }),btn("+","PLS",function($5)
-  {
+   });
+  }
+  function PLS(){
    return O(function($6)
    {
     return function($7)
     {
      return $4($6,$7);
     };
-   },$5);
-  })])]);
+   });
+  }
+  var keyString = "";
+  window.addEventListener('keydown', function(e){
+    // key input
+    keyString += e.key;
+    document.getElementById("id_keyinput").innerHTML = keyString;
+    switch (e.key.toUpperCase()){
+      case "0":
+      case "1":
+      case "2":
+      case "3":
+      case "4":
+      case "5":
+      case "6":
+      case "7":
+      case "8":
+      case "9":
+        D(parseInt(e.key));
+        break;
+      case ".":
+        P();
+        break;
+      case "S":
+        SIN();
+        break;
+      case "C":
+        COS();
+        break;
+      case "T":
+        TAN();
+        break;
+      case "P":
+        PI();
+        break;
+      case "BACKSPACE":
+        BS();
+        break;
+      case "N":
+        N();
+        break;
+      case "I":
+        I();
+        break;
+      case "DELETE":
+        C();
+        break;
+      case "ESCAPE":
+        AC();
+        break;
+      case "ENTER":  case "=":
+        event.preventDefault();
+        E();
+        break;
+      case " ":
+        event.preventDefault();
+        break;
+      case "/":
+        DIV();
+        break;
+      case "*":
+        MUL();
+        break;
+      case "-":
+        SUB();
+        break;
+      case "+":
+        PLS();
+        break;
+    }
+  });
+  // ------- end
+  
+  
   a=(b=(_this=new ProviderBuilder.New$1(),(_this.h.push({
    $:0,
    $0:"main",
@@ -5325,7 +5446,6 @@ if(!p.closest){p.closest=function(s){var e=this;while(e&&e.nodeType==1){if(e.mat
   Client.Main();
  });
 }(self));
-
 
 if (typeof IntelliFactory !=='undefined') {
   IntelliFactory.Runtime.ScriptBasePath = '/it-proj-group01/';
