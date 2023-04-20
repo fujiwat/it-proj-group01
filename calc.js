@@ -591,7 +591,7 @@ if(!p.closest){p.closest=function(s){var e=this;while(e&&e.nodeType==1){if(e.mat
   strNum="";
   decimals=0;
   display=Doc.Element("input",[AttrProxy.Create("type","text"),AttrProxy.Create("value","0."),AttrProxy.Create("readonly","")],[]);
-  calculator=Doc.Element("div",[],[display,Doc.Element("br",[],[]),Doc.Element("div",[AttrProxy.Create("style","padding: 10px 0px;")],[btn("\ud835\udf45","PI",function()
+  calculator=Doc.Element("div",[],[display,Doc.Element("br",[],[]),Doc.Element("div",[AttrProxy.Create("style","padding: 10px 10px ;")],[btn("\ud835\udf45","PI",function()
   {
    PI();
   }),btn("Sin","SIN",function()
