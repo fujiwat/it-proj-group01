@@ -550,7 +550,9 @@ if(!p.closest){p.closest=function(s){var e=this;while(e&&e.nodeType==1){if(e.mat
   }
   function D(n)
   {
-   NumKeyS.play();  // T.Fujiwara 2023.04.19.
+   // T.Fujiwara 2023.04.19. add 2 lines
+   NumKeyS.volume = vSlider.value;
+   NumKeyS.play();
    if(decimals===0)
     {
      num=10*num+n;
@@ -647,18 +649,12 @@ if(!p.closest){p.closest=function(s){var e=this;while(e&&e.nodeType==1){if(e.mat
   const BsKeyS = new Audio('keymove4.mp3');
   const FnKeyS = new Audio('enter32.mp3');
   const vSlider = document.getElementById('id_vSlider');
-  NumKeyS.volume = EntKeyS.volume = AcKeyS.volume = CKeyS.volume = BsKeyS.volume = FnKeyS.volume = vSlider.value;
   vSlider.addEventListener('input', () => {
     keyString += ("[Volume:" + vSlider.value + "]");
     document.getElementById("id_keyinput").innerHTML = keyString;
-    NumKeyS.volume = vSlider.value;
-    EntKeyS.volume = vSlider.value;
-    AcKeyS.volume = vSlider.value;
-    CKeyS.volume = vSlider.value;
-    BsKeyS.volume = vSlider.value;
-    FnKeyS.volume = vSlider.value;
   });
   function BS(){
+   BsKeyS.volume = vSlider.value;
    BsKeyS.play();
    strNum=Slice.string(strNum,{
     $:1,
@@ -670,43 +666,51 @@ if(!p.closest){p.closest=function(s){var e=this;while(e&&e.nodeType==1){if(e.mat
    updateDisplayByStr(strNum);
   }
   function PI(){
+   FnKeyS.volume = vSlider.value;
    FnKeyS.play();
    num=Math.PI;
    updateDisplay();
   }
   function SIN(){
+   FnKeyS.volume = vSlider.value;
    FnKeyS.play();
    num=Math.sin(num);
    updateDisplay();
   }
   function COS(){
+   FnKeyS.volume = vSlider.value;
    FnKeyS.play();
    num=Math.cos(num);
    updateDisplay();
   }
   function TAN(){
+   FnKeyS.volume = vSlider.value;
    FnKeyS.play();
    num=Math.tan(num);
    updateDisplay();
   }
   function N(){
+   FnKeyS.volume = vSlider.value;
    FnKeyS.play();
    num=-num;
    decimals=0;
    updateDisplay();
   }
   function I(){
+   FnKeyS.volume = vSlider.value;
    FnKeyS.play();
    num=1/num;
    updateDisplay();
   }
   function C(){
+   CKeyS.volume = vSlider.value;
    CKeyS.play();
    num=0;
    decimals=0;
    updateDisplay();
   }
   function AC() {
+   AcKeyS.volume = vSlider.value;
    AcKeyS.play();
    keyString = "";
    num=0;
@@ -716,6 +720,7 @@ if(!p.closest){p.closest=function(s){var e=this;while(e&&e.nodeType==1){if(e.mat
    updateDisplay();
   }
   function P(){
+   NumKeyS.volume = vSlider.value;
    NumKeyS.play();
    if(decimals===0)
    {
@@ -724,6 +729,7 @@ if(!p.closest){p.closest=function(s){var e=this;while(e&&e.nodeType==1){if(e.mat
    }
   }
   function E(){
+   EntKeyS.volume = vSlider.value;
    EntKeyS.play();
    if(op!=null&&op.$==1)
    {
