@@ -649,6 +649,8 @@ if(!p.closest){p.closest=function(s){var e=this;while(e&&e.nodeType==1){if(e.mat
   const vSlider = document.getElementById('id_vSlider');
   NumKeyS.volume = EntKeyS.volume = AcKeyS.volume = CKeyS.volume = BsKeyS.volume = FnKeyS.volume = vSlider.value;
   vSlider.addEventListener('input', () => {
+    keyString += ("[Volume:" + vSlider.value + "]");
+    document.getElementById("id_keyinput").innerHTML = keyString;
     NumKeyS.volume = EntKeyS.volume = AcKeyS.volume = CKeyS.volume = BsKeyS.volume = FnKeyS.volume = vSlider.value;
   });
   function BS(){
