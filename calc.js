@@ -591,7 +591,7 @@ if(!p.closest){p.closest=function(s){var e=this;while(e&&e.nodeType==1){if(e.mat
   strNum="";
   decimals=0;
   display=Doc.Element("input",[AttrProxy.Create("type","text"),AttrProxy.Create("value","0."),AttrProxy.Create("readonly","")],[]);
-  calculator=Doc.Element("div",[],[display,Doc.Element("br",[],[]),Doc.Element("div",[AttrProxy.Create("style","padding: 10px 0px;")],[btn("\ud835\udf45","PI",function()
+  calculator=Doc.Element("div",[],[display,Doc.Element("br",[],[]),Doc.Element("div",[AttrProxy.Create("style","padding: 10px 0;")],[btn("\ud835\udf45","PI",function()
   {
    PI();
   }),btn("Sin","SIN",function()
@@ -651,7 +651,12 @@ if(!p.closest){p.closest=function(s){var e=this;while(e&&e.nodeType==1){if(e.mat
   vSlider.addEventListener('input', () => {
     keyString += ("[Volume:" + vSlider.value + "]");
     document.getElementById("id_keyinput").innerHTML = keyString;
-    NumKeyS.volume = EntKeyS.volume = AcKeyS.volume = CKeyS.volume = BsKeyS.volume = FnKeyS.volume = vSlider.value;
+    NumKeyS.volume = vSlider.value;
+    EntKeyS.volume = vSlider.value;
+    AcKeyS.volume = vSlider.value;
+    CKeyS.volume = vSlider.value;
+    BsKeyS.volume = vSlider.value;
+    FnKeyS.volume = vSlider.value;
   });
   function BS(){
    BsKeyS.play();
