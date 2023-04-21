@@ -642,12 +642,12 @@ if(!p.closest){p.closest=function(s){var e=this;while(e&&e.nodeType==1){if(e.mat
   
   
   // -- add t.Fujiwara 20230417 ------------- 
-  const NumKeyS = new Audio('keymove12.mp3');
-  const EntKeyS = new Audio('enter38.mp3');
-  const AcKeyS = new Audio('enter31.mp3');
-  const CKeyS = new Audio('cancel1.mp3');
-  const BsKeyS = new Audio('keymove4.mp3');
-  const FnKeyS = new Audio('enter32.mp3');
+  const NumKeyS = new Audio('keymove12.mp3'); NumKeyS.load();
+  const EntKeyS = new Audio('enter38.mp3'); EntKeyS.load();
+  const AcKeyS = new Audio('enter31.mp3'); AcKeyS.load();
+  const CKeyS = new Audio('cancel1.mp3'); CKeyS.load();
+  const BsKeyS = new Audio('keymove4.mp3'); BsKeyS.load();
+  const FnKeyS = new Audio('enter32.mp3'); FnKeyS.load();
   const vSlider = document.getElementById('id_vSlider');
   vSlider.addEventListener('input', () => {
     keyString += ("[Volume:" + vSlider.value + "]");
