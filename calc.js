@@ -592,8 +592,8 @@ if(!p.closest){p.closest=function(s){var e=this;while(e&&e.nodeType==1){if(e.mat
   num=0;
   strNum="";
   decimals=0;
-  display=Doc.Element("input",[AttrProxy.Create("type","text"),AttrProxy.Create("value","0."),AttrProxy.Create("readonly","")],[]);
-  calculator=Doc.Element("div",[AttrProxy.Create("class","buttonarea")],[display,Doc.Element("br",[],[]),Doc.Element("div",[AttrProxy.Create("style","padding: 10px 0;")],[btn("\ud835\udf45","PI",function()
+  display=Doc.Element("input",[AttrProxy.Create("id","id_ans"),AttrProxy.Create("type","text"),AttrProxy.Create("value","0."),AttrProxy.Create("readonly","")],[]);
+  calculator=Doc.Element("div",[],[display,Doc.Element("br",[],[]),Doc.Element("div",[AttrProxy.Create("style","padding: 10px 0;")],[btn("\ud835\udf45","PI",function()
   {
    PI();
   }),btn("Sin","SIN",function()
@@ -642,12 +642,12 @@ if(!p.closest){p.closest=function(s){var e=this;while(e&&e.nodeType==1){if(e.mat
   
   
   // -- add t.Fujiwara 20230417 ------------- 
-  const NumKeyS = new Audio('keymove12.mp3'); NumKeyS.load();
-  const EntKeyS = new Audio('enter38.mp3'); EntKeyS.load();
-  const AcKeyS = new Audio('enter31.mp3'); AcKeyS.load();
-  const CKeyS = new Audio('cancel1.mp3'); CKeyS.load();
-  const BsKeyS = new Audio('keymove4.mp3'); BsKeyS.load();
-  const FnKeyS = new Audio('enter32.mp3'); FnKeyS.load();
+  const NumKeyS = new Audio('keymove12.mp3');
+  const EntKeyS = new Audio('enter38.mp3');
+  const AcKeyS = new Audio('enter31.mp3');
+  const CKeyS = new Audio('cancel1.mp3');
+  const BsKeyS = new Audio('keymove4.mp3');
+  const FnKeyS = new Audio('enter32.mp3');
   const vSlider = document.getElementById('id_vSlider');
   vSlider.addEventListener('input', () => {
     keyString += ("[Volume:" + vSlider.value + "]");
