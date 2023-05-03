@@ -62,81 +62,82 @@
 	        }
 
 			/************** calculator */    
+			:root {
+				--COL_AC_C			:#001A24;
+				--COL_OPERATOR 		:#00495C;
+				--COL_EQ 			:#00495C;
+				--COL_NEG_INV		:#00495C;
+				--COL_0_9_PERIOD	:#0083A3;
+				--COL_BASE			:#0085A6;
+				--COL_SIN_COS_TAN	:#006680;
+				--COL_BACKSPACE		:#006680;
+				--COL_TEXT			:#A4E2E9;
+			}
 			@font-face {
 				font-family: "D7CBI";
 				src: url("./fonts/DSEG7Classic-BoldItalic.woff") format('woff');
 			}
-			/* all buttons */
-			button {
-				width: 48px;
-				height: 38px;
-				margin: 8px;
-				padding: 0 0 0 0;
-				font-size: 22px;
-				font-weight: bold;
-				text-align: center;
-				-webkit-user-select: none;
-				-moz-user-select: none;
-				-ms-user-select: none;
-				user-select: none;
-			}
-			.buttonarea {
-				-webkit-user-select: none;
-				-moz-user-select: none;
-				-ms-user-select: none;
-				user-select: none;
-			}
+	        /* all buttons */
+	        button {
+	            width: 48px;
+	            height: 38px;
+	            margin: 8px;
+	            padding: 0 0 0 0;
+	            font-size: 22px;
+	            font-weight: bold;
+	            text-align: center;
+	        }
 	        /* C button */
 	        .C {
-	            background-color: #002933;
-	            color: #A4E2E9;
+	            color: var(--COL_TEXT);
+	            background-color: var(--COL_AC_C);
 	        }
 	        /* AC button */
 	        .AC {
-	            background-color: #002933;
-	            color: #A4E2E9;
+	            color: var(--COL_TEXT);
+	            background-color: var(--COL_AC_C);
 	        }
 	        /* = / * - + buttons */
 	        .E,.DIV, .MUL, .SUB, .PLS {
-	            color: #A4E2E9;
-	            background-color: #005266;
+	            color: var(--COL_TEXT);
+	            background-color: var(--COL_OPERATOR);
 	            font-size: 22px;
 	        }
 	        /* 1/x +/- buttons */
 	        .I, .N {
-	            color: #A4E2E9;
-	            background-color: #005266;
+	            color: var(--COL_TEXT);
+	            background-color: var(--COL_NEG_INV);
 	        }
 	        /* SIN COS TAN buttons*/
 	        .SIN, .COS, .TAN {
-	            color: #A4E2E9;
-	            background-color: #00a3cc;
+	            color: var(--COL_TEXT);
+	            background-color: var(--COL_SIN_COS_TAN);
 	            font-size: 18px;
 	            font-weight: bold;
 	        }
 	        /* pi button */
 	        .PI {
-	            color: #A4E2E9;
-	            background-color: #00a3cc;
+	            color: var(--COL_TEXT);
+	            background-color: var(--COL_SIN_COS_TAN);
 	            font-size: 20px;
 	            font-weight: lighter;
 	        }
 	        /* backspace button */
 	        .BS {
-	            color: #A4E2E9;
+	            color: var(--COL_TEXT);
+	            background-color: var(--COL_SIN_COS_TAN);
 	            font-size: 16px;
 	            font-weight: bolder;
-	            background-color: #00a3cc;
 	        }
 	        /* digits 0 1 2 3 4 5 6 7 8 9 buttons */
 	        .D {
-	            color: #A4E2E9;
-	            background-color: #007a99;
+	            color: var(--COL_TEXT);
+	            background-color: var(--COL_0_9_PERIOD);
 	        }
 	        /* decimal point .  button */
 	        .P {
-	            color: #A4E2E9;
-	            background-color: #007a99;
+	            color: var(--COL_TEXT);
+	            background-color: var(--COL_0_9_PERIOD);
 	        }
 	        /* display field */
 	        input {
@@ -172,7 +173,7 @@
 				<span id="id_keyinput">-- Group 01 (Dream Team) --</span>
 			</div>
 		
-	        <div style="text-align: center; width: 340px; background-color: #0085A6; padding: 20px">
+	        <div style="text-align: center; width: 340px; background-color: var(--COL_BASE); padding: 20px">
 	            <h2 style="color:white">Intuitive and<br> User-Friendly</h1>
 	            <h2 style="color:white">Web Calculator</h1>
 	            <div id="main" ws-children-template="Main">
