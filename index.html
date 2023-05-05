@@ -4,10 +4,10 @@
     <title>IT Proje1. Group1(Dream team) Calculator</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" type="text/css" href="calc.css" />
+    <link rel="stylesheet" type="text/css" href="Content/calc.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css?family=Quantico:ital@1&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Quantico:ital@1&display=swap" rel="stylesheet">
 
     <style>
 	    .header {
@@ -55,10 +55,8 @@
 		    /* border-color: white;*/
             color: white;
         }
-        body {
+        h2 {
         	font-family: "Tahoma";
-        	font-weight: "bold";
-        	font-size:  20px;
         }
 
 		/************** calculator */    
@@ -136,7 +134,7 @@
             display: none;
         }
     </style>
-    <script type="text/javascript" src="calc.head.js"></script>    
+    <script type="text/javascript" src="Content/calc.head.js"></script>    
 </head>
     <body>
 		<div class="header">
@@ -161,11 +159,19 @@
 	                <div ws-hole="Main">
 	                </div>
 	            </div>
-	            <script type="text/javascript" src="calc.js" defer></script>
-	        </div>
-	        <div style="text-align:right; width:330px;">
-	          <label for="id_vSlider">Volume: </label>
-	          <input style="width:70px" type="range" id="id_vSlider" min="0" max="1" step="0.1" value="0.5">
+				<!-- add t.Fujiwara 20230417 ------------- -->
+				<script>
+					  var keyString = "";
+					  window.onkeydown = function(e){
+						// key input
+						var key = e.key;
+						keyString += key;
+						document.getElementById("id_keyinput").innerHTML = keyString;
+						D(1);
+					  }
+				<!-- ------- end
+				</script>
+	            <script type="text/javascript" src="Content/calc.min.js"></script>
 	        </div>
 		</div>
     </body>
