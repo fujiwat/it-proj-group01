@@ -1,152 +1,162 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
-<head>
-    <title>IT Proje1. Group1(Dream team) Calculator</title>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" type="text/css" href="calc.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<!--
-    <link href="https://fonts.googleapis.com/css?family=Quantico:ital@1&display=swap" rel="stylesheet">
--->    
-    <link href="https://fonts.googleapis.com/css?family=Quantico:400&display=swap" rel="stylesheet" crossorigin>
-    
+    <head>
+		<title>IT Proje1. Group1(Dream team) Calculator</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" type="text/css" href="calc.css" />
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css?family=Quantico:400&display=swap" rel="stylesheet" crossorigin>
 
-    <style>
-	    .header {
-	        padding: 30px;
-	        text-align: center;
-	        background: DarkBlue;
-	        color: white;
-	        font-size: 25px;
-	    }
-		.navbar {
-	        width: 100%;
-	        background-color: white;
-	        overflow: auto;
-	    }
-		#calculator {
-			display: flex;
-			flex-direction: column;
-			align-items: center;
-			max-width: 400px;
-			margin: 0 auto;
-		}
+		<style>
+		    .header {
+		        padding: 30px;
+		        text-align: center;
+		        background: DarkBlue;
+		        color: white;
+		        font-size: 25px;
+		    }
+			.navbar {
+		        width: 100%;
+		        background-color: white;
+		        overflow: auto;
+		    }
+			#calculator {
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				max-width: 400px;
+				margin: 0 auto;
+			}
 
-		.display {
-			background-color: #fff;
-			border: 1px solid #ccc;
-			padding: 10px;
-			width: 100%;
-			margin-bottom: 10px;
-			text-align: right;
-			font-size: 24px;
-			height: 50px;
-			display: flex;
-			align-items: center;
-			justify-content: flex-end;
-		}
-		.display span {
-			flex: 1; 
-			overflow: hidden;
-			white-space: nowrap;
-			text-overflow: ellipsis;
-			text-align: center;
-		}
+			.display {
+				background-color: #fff;
+				border: 1px solid #ccc;
+				padding: 10px;
+				width: 100%;
+				margin-bottom: 10px;
+				text-align: right;
+				font-size: 24px;
+				height: 50px;
+				display: flex;
+				align-items: center;
+				justify-content: flex-end;
+			}
+			.display span {
+				flex: 1; 
+				overflow: hidden;
+				white-space: nowrap;
+				text-overflow: ellipsis;
+				text-align: center;
+			}
 
-		button:hover {
-		    /* border-color: white;*/
-            color: white;
-        }
-        body {
-        	font-family: sans-serif;
-        	font-weight: "bold";
-        	font-size:  16px;
-        }
+			button:hover {
+			    /* border-color: white;*/
+	            color: white;
+	        }
+	        body {
+	        	font-family: sans-serif;
+	        	font-weight: "bold";
+	        	font-size:  16px;
+	        }
 
-		/************** calculator */    
-        /* all buttons */
-        button {
-            width: 48px;
-            height: 38px;
-            margin: 8px;
-            padding: 0 0 0 0;
-            font-size: 22px;
-            font-weight: bold;
-            text-align: center;
-        }
-        /* C button */
-        .C {
-            background-color: #002933;
-            color: #A4E2E9;
-        }
-        /* AC button */
-        .AC {
-            background-color: #002933;
-            color: #A4E2E9;
-        }
-        /* = / * - + buttons */
-        .E,.DIV, .MUL, .SUB, .PLS {
-            color: #A4E2E9;
-            background-color: #005266;
-            font-size: 22px;
-        }
-        /* 1/x +/- buttons */
-        .I, .N {
-            color: #A4E2E9;
-            background-color: #005266;
-        }
-        /* SIN COS TAN buttons*/
-        .SIN, .COS, .TAN {
-            color: #A4E2E9;
-            background-color: #00a3cc;
-            font-size: 18px;
-            font-weight: bold;
-        }
-        /* pi button */
-        .PI {
-            color: #A4E2E9;
-            background-color: #00a3cc;
-            font-size: 20px;
-            font-weight: lighter;
-        }
-        /* backspace button */
-        .BS {
-            color: #A4E2E9;
-            font-size: 16px;
-            font-weight: bolder;
-            background-color: #00a3cc;
-        }
-        /* digits 0 1 2 3 4 5 6 7 8 9 buttons */
-        .D {
-            color: #A4E2E9;
-            background-color: #007a99;
-        }
-        /* decimal point .  button */
-        .P {
-            color: #A4E2E9;
-            background-color: #007a99;
-        }
-        /* display field */
-        input {
-            margin: 5px;
-            width: 288px;
-            padding: 5px;
-            font-size: 32px;
-            text-align: right;
-            font-weight: bold;
-            font-family: 'Quantico variant0', 'Quantico', sans-serif;
-            font-style: italic;
-            background-color: #CCE0E1;
-        }
-        /* Don't show the not-yet-loaded templates */
-        [ws-template], [ws-children-template] {
-            display: none;
-        }
-    </style>
-    <script type="text/javascript" src="calc.head.js"></script>    
-</head>
+			/************** calculator */    
+			:root {
+				--COL_AC_C			:#001A24;
+				--COL_OPERATOR 		:#00495C;
+				--COL_EQ 			:#00495C;
+				--COL_NEG_INV		:#00495C;
+				--COL_0_9_PERIOD	:#0083A3;
+				--COL_BASE			:#0085A6;
+				--COL_SIN_COS_TAN	:#006680;
+				--COL_BACKSPACE		:#006680;
+				--COL_TEXT			:#A4E2E9;
+			}
+			@font-face {
+				font-family: "D7CBI";
+				src: url("./fonts/DSEG7Classic-BoldItalic.woff") format('woff');
+			}
+	        /* all buttons */
+	        button {
+	            width: 48px;
+	            height: 38px;
+	            margin: 8px;
+	            padding: 0 0 0 0;
+	            font-size: 22px;
+	            font-weight: bold;
+	            text-align: center;
+	        }
+	        /* C button */
+	        .C {
+	            color: var(--COL_TEXT);
+	            background-color: var(--COL_AC_C);
+	        }
+	        /* AC button */
+	        .AC {
+	            color: var(--COL_TEXT);
+	            background-color: var(--COL_AC_C);
+	        }
+	        /* = / * - + buttons */
+	        .E,.DIV, .MUL, .SUB, .PLS {
+	            color: var(--COL_TEXT);
+	            background-color: var(--COL_OPERATOR);
+	            font-size: 22px;
+	        }
+	        /* 1/x +/- buttons */
+	        .I, .N {
+	            color: var(--COL_TEXT);
+	            background-color: var(--COL_NEG_INV);
+	        }
+	        /* SIN COS TAN buttons*/
+	        .SIN, .COS, .TAN {
+	            color: var(--COL_TEXT);
+	            background-color: var(--COL_SIN_COS_TAN);
+	            font-size: 18px;
+	            font-weight: bold;
+	        }
+	        /* pi button */
+	        .PI {
+	            color: var(--COL_TEXT);
+	            background-color: var(--COL_SIN_COS_TAN);
+	            font-size: 20px;
+	            font-weight: lighter;
+	        }
+	        /* backspace button */
+	        .BS {
+	            color: var(--COL_TEXT);
+	            background-color: var(--COL_SIN_COS_TAN);
+	            font-size: 16px;
+	            font-weight: bolder;
+	        }
+	        /* digits 0 1 2 3 4 5 6 7 8 9 buttons */
+	        .D {
+	            color: var(--COL_TEXT);
+	            background-color: var(--COL_0_9_PERIOD);
+	        }
+	        /* decimal point .  button */
+	        .P {
+	            color: var(--COL_TEXT);
+	            background-color: var(--COL_0_9_PERIOD);
+	        }
+	        /* display field */
+	        input {
+	            margin: 5px;
+	            width: 288px;
+	            padding: 5px 5px 5px 5px;
+	            font-size: 32px;
+	            text-align: right;
+	            font-weight: bold;
+	            font-family: 'D7CBI', 'Quantico variant0', 'Quantico', sans-serif;
+	            background-color: #CCE0E1;
+	        }
+	        /* Don't show the not-yet-loaded templates */
+	        [ws-template], [ws-children-template] {
+	            display: none;
+	        }
+	    </style>
+	    <script type="text/javascript" src="calc.head.js"></script>
+    </head>
     <body>
 		<div class="header">
 	        <p>University of Dunaújváros Calculator</p>
@@ -163,16 +173,17 @@
 				<span id="id_keyinput">-- Group 01 (Dream Team) --</span>
 			</div>
 		
-	        <div style="text-align: center; width: 340px; background-color: #0085A6; padding: 20px">
+	        <div style="text-align: center; width: 340px; background-color: var(--COL_BASE); padding: 20px">
 	            <h2 style="color:white">Intuitive and<br> User-Friendly</h1>
-	            <h2 style="color:white">Web Calculator</h1>
+	            <label for="id_ans" style="color:white; font-size:25px; font-weight: bold;">Web Calculator</label>
+	            <div style="margin:20px"></div>
 	            <div id="main" ws-children-template="Main">
 	                <div ws-hole="Main">
 	                </div>
 	            </div>
 	            <script type="text/javascript" src="calc.js" defer></script>
 	        </div>
-	        <div style="text-align:right; width:390px;">
+	        <div style="text-align:right; width:390px; margin-bottom:40px">
 	          <label for="id_vSlider">Volume: </label>
 	          <input style="width:70px" type="range" id="id_vSlider" min="0" max="1" step="0.1" value="0.5">
 	        </div>
