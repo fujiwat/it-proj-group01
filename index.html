@@ -4,10 +4,14 @@
     <title>IT Proje1. Group1(Dream team) Calculator</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" type="text/css" href="Content/calc.css" />
+    <link rel="stylesheet" type="text/css" href="calc.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Quantico:ital@1&display=swap" rel="stylesheet">
+<!--
+    <link href="https://fonts.googleapis.com/css?family=Quantico:ital@1&display=swap" rel="stylesheet">
+-->    
+    <link href="https://fonts.googleapis.com/css?family=Quantico:400&display=swap" rel="stylesheet" crossorigin>
+    
 
     <style>
 	    .header {
@@ -55,18 +59,22 @@
 		    /* border-color: white;*/
             color: white;
         }
-        h2 {
-        	font-family: "Tahoma";
+        body {
+        	font-family: sans-serif;
+        	font-weight: "bold";
+        	font-size:  16px;
         }
 
 		/************** calculator */    
         /* all buttons */
         button {
             width: 48px;
-            height: 36px;
-            margin: 5px;
-            font-size: 18px;
+            height: 38px;
+            margin: 8px;
+            padding: 0 0 0 0;
+            font-size: 22px;
             font-weight: bold;
+            text-align: center;
         }
         /* C button */
         .C {
@@ -82,7 +90,7 @@
         .E,.DIV, .MUL, .SUB, .PLS {
             color: #A4E2E9;
             background-color: #005266;
-            font-size: 20px;
+            font-size: 22px;
         }
         /* 1/x +/- buttons */
         .I, .N {
@@ -93,19 +101,21 @@
         .SIN, .COS, .TAN {
             color: #A4E2E9;
             background-color: #00a3cc;
-            font-size: 16px;
+            font-size: 18px;
             font-weight: bold;
         }
         /* pi button */
         .PI {
             color: #A4E2E9;
             background-color: #00a3cc;
+            font-size: 20px;
             font-weight: lighter;
         }
         /* backspace button */
         .BS {
             color: #A4E2E9;
-            font-weight: bold;
+            font-size: 16px;
+            font-weight: bolder;
             background-color: #00a3cc;
         }
         /* digits 0 1 2 3 4 5 6 7 8 9 buttons */
@@ -121,12 +131,13 @@
         /* display field */
         input {
             margin: 5px;
-            width: 266px;
+            width: 288px;
             padding: 5px;
             font-size: 32px;
             text-align: right;
             font-weight: bold;
-            font-family: 'Quantico', sans-serif;
+            font-family: 'Quantico variant0', 'Quantico', sans-serif;
+            font-style: italic;
             background-color: #CCE0E1;
         }
         /* Don't show the not-yet-loaded templates */
@@ -134,11 +145,11 @@
             display: none;
         }
     </style>
-    <script type="text/javascript" src="Content/calc.head.js"></script>    
+    <script type="text/javascript" src="calc.head.js"></script>    
 </head>
     <body>
 		<div class="header">
-	        <p>University of Dunaujvaros Calculator</p>
+	        <p>University of Dunaújváros Calculator</p>
 	    </div>
 	    <div class="navbar">
 	        <a class="active" href="https://www.uniduna.hu/en/"><i class="fa fa-fw fa-home"></i> Home</a>
@@ -152,26 +163,18 @@
 				<span id="id_keyinput">-- Group 01 (Dream Team) --</span>
 			</div>
 		
-	        <div style="text-align: center; width: 290px; background-color: #0085A6; padding: 20px">
+	        <div style="text-align: center; width: 340px; background-color: #0085A6; padding: 20px">
 	            <h2 style="color:white">Intuitive and<br> User-Friendly</h1>
 	            <h2 style="color:white">Web Calculator</h1>
 	            <div id="main" ws-children-template="Main">
 	                <div ws-hole="Main">
 	                </div>
 	            </div>
-				<!-- add t.Fujiwara 20230417 ------------- -->
-				<script>
-					  var keyString = "";
-					  window.onkeydown = function(e){
-						// key input
-						var key = e.key;
-						keyString += key;
-						document.getElementById("id_keyinput").innerHTML = keyString;
-						D(1);
-					  }
-				<!-- ------- end
-				</script>
-	            <script type="text/javascript" src="Content/calc.min.js"></script>
+	            <script type="text/javascript" src="calc.js" defer></script>
+	        </div>
+	        <div style="text-align:right; width:390px;">
+	          <label for="id_vSlider">Volume: </label>
+	          <input style="width:70px" type="range" id="id_vSlider" min="0" max="1" step="0.1" value="0.5">
 	        </div>
 		</div>
     </body>
