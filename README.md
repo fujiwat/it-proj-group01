@@ -46,7 +46,6 @@ Video 20sec:  https://github.com/fujiwat/it-proj-group01/assets/16160120/1739aa2
 Several Color sets are tested.<br />
 <img src="https://github.com/fujiwat/it-proj-group01/assets/16160120/3e7ddd93-4fe6-4e02-bf60-12f92af01c5e" width="400" /><br />
 - Consideration for People With Color Blindness<br />
-
 Every buttons, text is able to recognize clearly<br />
 <img src="https://github.com/fujiwat/it-proj-group01/assets/16160120/9e540607-faee-439a-a26e-5fa0fcc185e0" width="400" />
 
