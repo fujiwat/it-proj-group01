@@ -29,8 +29,8 @@ You can use touch typing easily.
 
 ### Point 2. Notification by Sound
 5 types of Sound:  0-9.   +-÷×   AC   C    BS
-Found a suitable sound from a license-free website and made it shorter
-(https://soundeffect-lab.info/sound/button/)
+Found a suitable sound from a license-free website and made it shorter (https://soundeffect-lab.info/sound/button/)
+
 <img src="https://github.com/fujiwat/it-proj-group01/assets/16160120/591a96a1-32f3-4824-889c-0f516978487b" width="300" />
 <img src="https://github.com/fujiwat/it-proj-group01/assets/16160120/a2b560d7-7a1a-462f-8a55-f0256c3ca426" width="300" />
 
