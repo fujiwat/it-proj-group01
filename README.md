@@ -55,7 +55,7 @@ Every buttons, text is able to recognize clearly
 
 ### Succeeded to Improve in Objective Tests
 - Lighthousr -- Google Web Accessibility Check
-First version:
+First version:<br />
 <img src="https://github.com/fujiwat/it-proj-group01/assets/16160120/f4be05b9-a2e2-4695-b5a6-4410a1c87e51" width="200" /><br />
 Second version:
 <img src="https://github.com/fujiwat/it-proj-group01/assets/16160120/2c336f19-09c2-49dd-9f5c-2ca0e885201b" width="200" /><br />
