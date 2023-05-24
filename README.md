@@ -39,7 +39,7 @@ Found a suitable sound from a license-free website and made it shorter (https://
 It is better to have key input for realistic calculator program.
 We can input faster using hardware keyboard.
 https://github.com/fujiwat/it-proj-group01/assets/16160120/1739aa2d-2aca-4a57-b40d-fde3e8e42d56
-<img src="https://github.com/fujiwat/it-proj-group01/assets/16160120/42e49d3e-6182-433a-8f9c-618e966c8cda" width="300" />
+<img src="https://github.com/fujiwat/it-proj-group01/assets/16160120/42e49d3e-6182-433a-8f9c-618e966c8cda" width="200" />
 
 ### Point 4. Web Accessibility for Visual Disabilities
 - Contrast between Text and Background needs 3:1
