@@ -44,14 +44,14 @@ Video 20sec:  https://github.com/fujiwat/it-proj-group01/assets/16160120/1739aa2
 ### Point 4. Web Accessibility for Visual Disabilities
 - Contrast between Text and Background needs 3:1
 Several Color sets are tested.
-<img src="https://github.com/fujiwat/it-proj-group01/assets/16160120/3e7ddd93-4fe6-4e02-bf60-12f92af01c5e" width="400" />
+<img src="https://github.com/fujiwat/it-proj-group01/assets/16160120/3e7ddd93-4fe6-4e02-bf60-12f92af01c5e" width="400" /><br />
 - Consideration for People With Color Blindness
 Every buttons, text is able to recognize clearly
 <img src="https://github.com/fujiwat/it-proj-group01/assets/16160120/9e540607-faee-439a-a26e-5fa0fcc185e0" width="400" />
 
 ### Point 5.  Uniform Display Using Web Fonts
-![image](https://github.com/fujiwat/it-proj-group01/assets/16160120/385077db-100e-4fa9-969c-df054a338df6)
-![image](https://github.com/fujiwat/it-proj-group01/assets/16160120/96f4f133-f3ca-483d-a73e-e0d1d583be4c)
+<img src="https://github.com/fujiwat/it-proj-group01/assets/16160120/385077db-100e-4fa9-969c-df054a338df6" width="400" /><br />
+<img src="https://github.com/fujiwat/it-proj-group01/assets/16160120/96f4f133-f3ca-483d-a73e-e0d1d583be4c" width="400" />
 
 ### Succeeded to Improve in Objective Tests
 - Lighthousr -- Google Web Accessibility Check
