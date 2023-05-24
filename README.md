@@ -50,19 +50,19 @@ Every buttons, text is able to recognize clearly
 <img src="https://github.com/fujiwat/it-proj-group01/assets/16160120/9e540607-faee-439a-a26e-5fa0fcc185e0" width="400" />
 
 ### Point 5.  Uniform Display Using Web Fonts
-<img src="https://github.com/fujiwat/it-proj-group01/assets/16160120/385077db-100e-4fa9-969c-df054a338df6" width="400" /><br />
+<img src="https://github.com/fujiwat/it-proj-group01/assets/16160120/385077db-100e-4fa9-969c-df054a338df6" width="350" /><br />
 <img src="https://github.com/fujiwat/it-proj-group01/assets/16160120/96f4f133-f3ca-483d-a73e-e0d1d583be4c" width="400" />
 
 ### Succeeded to Improve in Objective Tests
 - Lighthousr -- Google Web Accessibility Check
 First version:
-<img src="https://github.com/fujiwat/it-proj-group01/assets/16160120/f4be05b9-a2e2-4695-b5a6-4410a1c87e51" width="200" />
+<img src="https://github.com/fujiwat/it-proj-group01/assets/16160120/f4be05b9-a2e2-4695-b5a6-4410a1c87e51" width="200" /><br />
 Second version:
-<img src="https://github.com/fujiwat/it-proj-group01/assets/16160120/2c336f19-09c2-49dd-9f5c-2ca0e885201b" width="200" />
+<img src="https://github.com/fujiwat/it-proj-group01/assets/16160120/2c336f19-09c2-49dd-9f5c-2ca0e885201b" width="200" /><br />
 Final version:
-<img src="https://github.com/fujiwat/it-proj-group01/assets/16160120/5aa1b949-9c74-41a3-9911-716c94c4aab4" width="200" />
+<img src="https://github.com/fujiwat/it-proj-group01/assets/16160120/5aa1b949-9c74-41a3-9911-716c94c4aab4" width="200" /><br />
 - Google Mobile Friendly Test
-<img src="https://github.com/fujiwat/it-proj-group01/assets/16160120/3a3216ee-3a45-4d48-bb67-d92e1b1461ae" width="200" />
+<img src="https://github.com/fujiwat/it-proj-group01/assets/16160120/3a3216ee-3a45-4d48-bb67-d92e1b1461ae" width="200" /><br />
 
 ## Restrictions
 The calculation values are using double which means 64bit IEEE floating-point number type. Sometimes it causes a margin of error therefore this program round to the 10th decimal place.
