@@ -1,5 +1,5 @@
 # IT Project1 "Reference worthy Web Calculator"- Group work
-<img src="https://github.com/fujiwat/it-proj-group01/assets/16160120/aac3c3e0-2aa7-4ce5-8f5a-3b742e9bfa5e" width="200">
+<img src="https://github.com/fujiwat/it-proj-group01/assets/16160120/aac3c3e0-2aa7-4ce5-8f5a-3b742e9bfa5e" width="200" />
 
 
 ## Overview
@@ -25,7 +25,7 @@ When you click the buttons for * / - + then the calculation is immediately occur
 ### Point 1.  Button Layout and Coloring
 Darker color placed outside.  Easy to find number buttons at center area.
 You can use touch typing easily.
-![image](https://github.com/fujiwat/it-proj-group01/assets/16160120/6029698d-2194-4090-9d21-2de71cb98798)
+<img src="https://github.com/fujiwat/it-proj-group01/assets/16160120/6029698d-2194-4090-9d21-2de71cb98798" width="200" />
 
 ### Point 2. Notification by Sound
 5 types of Sound:  0-9.   +-÷×   AC   C    BS
