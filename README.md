@@ -42,11 +42,11 @@ Video 20sec:  https://github.com/fujiwat/it-proj-group01/assets/16160120/1739aa2
 <img src="https://github.com/fujiwat/it-proj-group01/assets/16160120/42e49d3e-6182-433a-8f9c-618e966c8cda" width="200" />
 
 ### Point 4. Web Accessibility for Visual Disabilities
-- Contrast between Text and Background needs 3:1
-Several Color sets are tested.
+- Contrast between Text and Background needs 3:1<br />
+Several Color sets are tested.<br />
 <img src="https://github.com/fujiwat/it-proj-group01/assets/16160120/3e7ddd93-4fe6-4e02-bf60-12f92af01c5e" width="400" /><br />
-- Consideration for People With Color Blindness
-Every buttons, text is able to recognize clearly
+- Consideration for People With Color Blindness<br />
+Every buttons, text is able to recognize clearly<br />
 <img src="https://github.com/fujiwat/it-proj-group01/assets/16160120/9e540607-faee-439a-a26e-5fa0fcc185e0" width="400" />
 
 ### Point 5.  Uniform Display Using Web Fonts
