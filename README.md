@@ -1,5 +1,5 @@
-# "Reference worthy Web Calculator"
 ### IT Project1 - Group work
+# "Reference worthy Web Calculator"
 <img src="https://github.com/fujiwat/it-proj-group01/assets/16160120/aac3c3e0-2aa7-4ce5-8f5a-3b742e9bfa5e" width="200" />
 
 
