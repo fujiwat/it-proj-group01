@@ -26,13 +26,14 @@ When you click the buttons for * / - + then the calculation is immediately occur
 ### Point 1.  Button Layout and Coloring
 Darker color placed outside.  Easy to find number buttons at center area.
 You can use touch typing easily.
-<img src="https://github.com/fujiwat/it-proj-group01/assets/16160120/6029698d-2194-4090-9d21-2de71cb98798" width="200" />
+<img src="https://github.com/fujiwat/it-proj-group01/assets/16160120/6029698d-2194-4090-9d21-2de71cb98798" width="300" />
 
 ### Point 2. Notification by Sound
 5 types of Sound:  0-9.   +-÷×   AC   C    BS
 Found a suitable sound from a license-free website and made it shorter (https://soundeffect-lab.info/sound/button/)
 
 <img src="https://github.com/fujiwat/it-proj-group01/assets/16160120/591a96a1-32f3-4824-889c-0f516978487b" width="300" />
+
 <img src="https://github.com/fujiwat/it-proj-group01/assets/16160120/a2b560d7-7a1a-462f-8a55-f0256c3ca426" width="300" />
 
 ### Point 3. Dual Input Methods, From Keyboard and Click/Tap
